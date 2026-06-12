@@ -19,7 +19,11 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    //'allowed_origins' => ['*'],
+    'allowed_origins' => [
+    env('FRONTEND_URL', 'http://localhost:3000'), 
+    'https://viveroemma.netlify.app/' // 👈 Acá vas a poner la URL real cuando te la dé Netlify
+],
 
     'allowed_origins_patterns' => [],
 
